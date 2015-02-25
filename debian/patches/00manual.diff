@@ -1,0 +1,166 @@
+--- minicom/man/minicom.1	2014-01-01 10:20:31.672155938 +0100
++++ minicom/man/minicom.1	2014-01-01 10:12:24.578127579 +0100
+@@ -20,7 +20,7 @@
+ configurations, and more.
+ .SH COMMAND-LINE
+ .TP 0.5i
+-.B \-s, --setup
++.B \-s, \-\-setup
+ .BR S etup.
+ Root edits the system-wide defaults in /etc/minirc.dfl with this option. 
+ When it is used, minicom does 
+@@ -30,7 +30,7 @@
+ because your system has changed, or for the first time you run
+ minicom. For most systems, reasonable defaults are already compiled in.
+ .TP 0.5i
+-.B \-o, --noinit
++.B \-o, \-\-noinit
+ Do not initialize. Minicom will skip the initialization code.  This
+ option is handy if you quit from minicom without resetting, and
+ then want to restart a session. It is potentially dangerous though: no
+@@ -39,7 +39,7 @@
+ it is assumed, that users who are given access to a modem are
+ responsible enough for their actions.
+ .TP 0.5i
+-.B \-m, --metakey
++.B \-m, \-\-metakey
+ Override command-key with the Meta or ALT key. This is the default in 1.80
+ and it can also be configured in one of minicom's menus, but if you use 
+ different terminals all the time, of which some don't have a Meta or ALT key,
+@@ -48,39 +48,39 @@
+ assumes that your Meta key sends the ESC prefix, not the other variant
+ that sets the highest bit of the character.
+ .TP 0.5i
+-.B \-M, --metakey8
++.B \-M, \-\-metakey8
+ Same as \-m, but assumes that your Meta key sets the 8th bit of the
+ character high (sends 128 + character code).
+ .TP 0.5i
+-.B \-z, --statline
++.B \-z, \-\-statline
+ Use terminal status line. This only works on terminals that support it
+ and that have the relevant information in their \fItermcap\fP or
+ \fIterminfo\fP database entry.
+ .TP 0.5i
+-.B \-l, --ansi
++.B \-l, \-\-ansi
+ .BR L iteral
+ translation of characters with the high bit set. With this flag on,
+ minicom will try to translate the IBM line characters to ASCII. Many PC-unix
+ clones will display character correctly without translation (Linux in a
+ special mode, Coherent and SCO).
+ .TP 0.5i
+-.B \-L, --iso
++.B \-L, \-\-iso
+ Ditto but assume screen uses an ISO8859 character set.
+ .TP 0.5i
+-.B \-w, --wrap
++.B \-w, \-\-wrap
+ Turns line-wrap on at startup by default.
+ .TP 0.5i
+-.B \-H, --displayhex
++.B \-H, \-\-displayhex
+ Turn on output in hex mode.
+ .TP 0.5i
+-.B \-a, --attrib=on/off
++.B \-a, \-\-attrib=on/off
+ .BR A ttribute
+ usage. Some terminals, notably Televideo's, have rotten attribute
+ handling (serial instead of parallel). By default, minicom uses '\-a
+ on', but if you are using such a terminal you can (must!)  supply the
+ option '\-a off'. The trailing 'on' or 'off' is needed.
+ .TP 0.5i
+-.B \-t, --term=TERM
++.B \-t, \-\-term=TERM
+ .BR T erminal
+ type. With this flag, you can override the environment TERM variable.
+ This is handy for use in the MINICOM environment variable; one can create
+@@ -88,7 +88,7 @@
+ initializes the screen to raw mode so that in conjunction with the \-l
+ flag, the IBM line characters are displayed untranslated.
+ .TP 0.5i
+-.B \-c, --color=on/off
++.B \-c, \-\-color=on/off
+ .BR C olor
+ usage. Some terminals (such as the Linux console) support color with
+ the standard ANSI escape sequences. Because there is apparently no
+@@ -97,14 +97,14 @@
+ with '\-c on'. This, and the '\-m' option, are good candidates to put
+ into the MINICOM environment variable.
+ .TP 0.5i
+-.B \-S, --script=SCRIPT
++.B \-S, \-\-script=SCRIPT
+ .BR script .
+ Run the named script at startup. So far, passing username and password
+ to a startup script is not supported. If you also use the \-d option to
+ start dialing at startup, the \-S script will be run BEFORE dialing the
+ entries specified with \-d.
+ .TP 0.5i
+-.B \-d, --dial=ENTRY
++.B \-d, \-\-dial=ENTRY
+ .BR D ial
+ an entry from the dialing directory on startup. You can specify an
+ index number, but also a substring of the name of the entry. If you 
+@@ -114,7 +114,7 @@
+ entry specified after all other program initialization procedures are 
+ completed.
+ .TP 0.5i
+-.B \-p, --ptty=TTYP
++.B \-p, \-\-ptty=TTYP
+ .BR P seudo
+ terminal
+ to use. This overrides the terminal port defined in the configuration
+@@ -122,11 +122,11 @@
+ the form (/dev/)tty[p-z/][0-f], (/dev/)pts[p-z/][0-f] or 
+ (/dev/)pty[p-z/][0-f]. For example, /dev/ttyp1, pts/0 or /dev/ptyp2.
+ .TP 0.5i
+-.B \-C, --capturefile=FILE
++.B \-C, \-\-capturefile=FILE
+ .BR filename .
+ Open capture file at startup.
+ .TP 0.5i
+-.B \-F, --statlinefmt
++.B \-F, \-\-statlinefmt
+ Format for the status line. The following format specifier are available:
+    %H  Escape key for help screen.
+    %V  Version string of minicom.
+@@ -139,32 +139,32 @@
+ 
+ Example: "%H for help | %b | Minicom %V | %T | %C | %t"
+ .TP 0.5i
+-.B \-b, --baudrate
++.B \-b, \-\-baudrate
+ Specify the baud rate, overriding the value given in the configuration
+ file.
+ .TP 0.5i
+-.B \-D, --device
++.B \-D, \-\-device
+ Specify the device, overriding the value given in the configuration file.
+ .TP 0.5i
+-.B \-R, --remotecharset
++.B \-R, \-\-remotecharset
+ Specify the character set of the remote system is using and convert it to
+ the character set of the local side. Example might be 'latin1'.
+ .TP 0.5i
+-.B \-7, --7bit
++.B \-7, \-\-7bit
+ 7bit mode for terminals which aren't 8bit capable. 8bit is default if the
+ environment is configured for this via LANG or LC_ALL, 7bit otherwise.
+ .TP 0.5i
+-.B \-8, --8bit
++.B \-8, \-\-8bit
+ 8bit characters pass through without any modification.  'Continuous'
+ means no locate/attribute control sequences are inserted without
+ real change of locate/attribute. This mode is to display 8bit
+ multi-byte characters such as Japanese. Not needed in every language with
+ 8bit characters. (For example displaying Finnish text doesn't need this.)
+ .TP 0.5i
+-.B \-h, --help
++.B \-h, \-\-help
+ Display help and exit.
+ .TP 0.5i
+-.B \-v, --version
++.B \-v, \-\-version
+ Print the minicom version.
+ .PP
+ .RS 0.5i

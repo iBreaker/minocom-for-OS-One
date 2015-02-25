@@ -1,0 +1,39 @@
+--- minicom-2.2.orig/man/minicom.1
++++ minicom-2.2/man/minicom.1
+@@ -22,7 +22,7 @@
+ .TP 0.5i
+ .B \-s, \-\-setup
+ .BR S etup.
+-Root edits the system-wide defaults in /etc/minirc.dfl with this option. 
++Root edits the system-wide defaults in /etc/minicom/minirc.dfl with this option. 
+ When it is used, minicom does 
+ .I not 
+ initialize, but puts you directly into the
+@@ -823,16 +823,18 @@
+ .BR hack " :-) was added. Now, minicom can separate the escape key and"
+ escape-sequences. To see how dirty this was done, look into wkeys.c.
+ But it works like a charm!
++.SH DEBIAN SPECIFIC
++In Debian GNU/Linux systems, minicom is not setuid root. Users that
++need to use it have to get added to the
++.I dialout
++group in order to use serial port devices. 
+ .SH FILES
+-Minicom keeps it's configuration files in one directory, usually
+-/var/lib/minicom, /usr/local/etc or /etc. To find out what default
+-directory minicom has compiled in, issue the command \fIminicom -h\fP.
+-You'll probably also find the demo files for \fBrunscript\fP(1),
+-and the examples of character conversion tables either there or 
+-in the subdirectories of /usr/doc/minicom*. The conversion tables are
+-named something like mc.* in that directory, but you probably want to
+-copy the ones you need in your home directory as something beginning
+-with a dot.
++Minicom keeps it's configuration files in the directory /etc/minicom.
++You'll find the demo files for \fBrunscript\fP(1), and the examples of
++character conversion tables in /usr/share/doc/minicom. The conversion
++tables are named something like mc.* in the tables subdirectory, but
++you probably want to copy the ones you need in your home directory as
++something beginning with a dot.
+ .sp 1
+ .nf
+ minirc.*

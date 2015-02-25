@@ -1,0 +1,586 @@
+minicom (2.7-1) unstable; urgency=low
+
+  * New upstream release, closes: #707564 (configurable status line).
+  * Fixed history buffer message box text width, closes: #470582.
+  * Added homepage control field.
+  * Updated watch file, but it still doesn't work.
+  * Updated standards version.
+
+ -- Martin A. Godisch <godisch@debian.org>  Wed, 01 Jan 2014 10:28:00 +0100
+
+minicom (2.6.2-1) unstable; urgency=low
+
+  * New upstream release,
+    closes: #698407 (handling of long device names).
+
+ -- Martin A. Godisch <godisch@debian.org>  Thu, 07 Feb 2013 22:02:34 +0100
+
+minicom (2.6.1-3) unstable; urgency=low
+
+  * Fixed compiler warnings.
+    Thanks to the gentle upstream maintainer.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 13 Jan 2013 14:30:37 +0100
+
+minicom (2.6.1-2) unstable; urgency=low
+
+  * Changed path delimiter handling, closes: #697624.
+    Thanks to the gentle upstream maintainer.
+  * Updated standards version:
+    + Added build-arch and build-indep target to debian/rules.
+    + Added $(shell dpkg-buildflags --export=configure) to configure call.
+  * Fixed debian/watch, closes: #692880.
+
+ -- Martin A. Godisch <godisch@debian.org>  Thu, 10 Jan 2013 20:28:50 +0100
+
+minicom (2.6.1-1) unstable; urgency=low
+
+  * New upstream release,
+    closes: #659351 (minicom stops receiving in -R utf-8 mode).
+
+ -- Martin A. Godisch <godisch@debian.org>  Sat, 11 Feb 2012 18:53:08 +0100
+
+minicom (2.6-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 01 Jan 2012 17:27:25 +0100
+
+minicom (2.5-2) unstable; urgency=low
+
+  * Backported upstream fix to not extend ~ in non-path configs,
+    closes: #621741, thanks to Florian Lohoff and Adam Lackorzynski.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sat, 16 Apr 2011 14:21:27 +0200
+
+minicom (2.5-1) unstable; urgency=low
+
+  * New upstream release,
+    closes: #610511 (string/word size limit to 89 characters),
+    closes: #610512 (scripts never exit).
+  * Removed some Debian patches which are now in upstream.
+
+ -- Martin A. Godisch <godisch@debian.org>  Fri, 04 Feb 2011 20:06:55 +0100
+
+minicom (2.4-4) unstable; urgency=low
+
+  * Updated package to source format 3.0 (quilt).
+  * Updated standards version.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sat, 11 Sep 2010 22:31:26 +0200
+
+minicom (2.4-3) unstable; urgency=medium
+
+  * Fixed failing package purge, closes: #591865.
+    Thanks to Alexander Korsunsky.
+  * Fixed setting localecho in config file (upstream backport),
+    closes: #590900. Thanks to Peter De Wachter.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 05 Sep 2010 10:30:00 +0200
+
+minicom (2.4-2) unstable; urgency=low
+
+  * Backported upstream fix for FHS compliant lock-file format,
+    closes: #578001.
+
+ -- Martin A. Godisch <godisch@debian.org>  Thu, 27 May 2010 01:38:13 +0200
+
+minicom (2.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sat, 26 Dec 2009 14:15:52 +0100
+
+minicom (2.4~rc1-1) unstable; urgency=low
+
+  * New upstream release,
+    closes: #552892 (FTBFS: conflicting types for getline)
+
+ -- Martin A. Godisch <godisch@debian.org>  Sat, 21 Nov 2009 12:22:20 +0100
+
+minicom (2.3-1) unstable; urgency=low
+
+  * New upstream release,
+    closes: #466961 (limited input field for history lines).
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 24 Feb 2008 16:29:10 +0100
+
+minicom (2.3~rc1-3) unstable; urgency=low
+
+  * Changed string size, closes: #460485.
+  * Added missing localization, closes: #460497.
+  * Fixed single quotes in manpage, closes: #466962.
+  * Updated standards version.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sat, 23 Feb 2008 20:48:25 +0100
+
+minicom (2.3~rc1-2) unstable; urgency=low
+
+  * Fixed GNU/kFreeBSD build, thanks to Petr Salinger.
+  * Enhanced xminicom, closes: #389028.
+  * Fixed watch file.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 09 Dec 2007 12:37:10 +0100
+
+minicom (2.3~rc1-1) unstable; urgency=low
+
+  * New upstream release candidate,
+    closes: #412561 (minicom can't read .dialdir created on amd64),
+    closes: #416060 (wrong way to scan a directory and list files),
+    closes: #419538 (SEGV with deep directory).
+    Thanks to Ludovic Rousseau and Yasushi Shoji for patches.
+  * Updated menu section.
+  * Fixed clean target.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 07 Oct 2007 20:23:15 +0200
+
+minicom (2.2-5) unstable; urgency=low
+
+  * Fixed localization bug, closes: #405219.
+    Thanks to upstream maintainer Adam Lackorzynski.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 07 Jan 2007 17:59:58 +0100
+
+minicom (2.2-4) unstable; urgency=low
+
+  * Added 04screenkeybmenu.diff,
+    thanks to upstream maintainer Adam Lackorzynski.
+
+ -- Martin A. Godisch <godisch@debian.org>  Mon, 06 Nov 2006 18:01:05 +0100
+
+minicom (2.2-3) unstable; urgency=low
+
+  * Added upstream NEWS file, closes: #394827.
+  * Fixed spelling errors, closes: #395449.
+
+ -- Martin A. Godisch <godisch@debian.org>  Fri, 27 Oct 2006 05:41:23 +0200
+
+minicom (2.2-2) unstable; urgency=low
+
+  * Fixed build script to build .gmo files. Thanks to Adam Lackorzynski.
+  * Updated control file.
+
+ -- Martin A. Godisch <godisch@debian.org>  Fri, 20 Oct 2006 15:28:10 +0200
+
+minicom (2.2-1) unstable; urgency=low
+
+  * New upstream release,
+    closes: #188184 (more rc file options),
+    closes: #336879 (-8 flag isn't neccessary any longer),
+    closes: #340899 (handling of long lines in config files).
+  * Fixed preinst script, closes: #358635.
+  * Fixed watch file.
+  * Updated README.Debian.
+  * Updated standards version.
+
+ -- Martin A. Godisch <godisch@debian.org>  Thu, 19 Oct 2006 18:54:10 +0200
+
+minicom (2.1-10) unstable; urgency=low
+
+  * Applied patch to prevent crash with very long lines, closes: #337178.
+    Thanks to Christian 'Greek0' Aichinger.
+  * Updated standards version,
+    fixed debian/rules, debian/control, debian/changelog.
+
+ -- Martin A. Godisch <godisch@debian.org>  Fri, 04 Nov 2005 18:06:15 +0100
+
+minicom (2.1-9) unstable; urgency=low
+
+  * Fixed manual typos, closes: #301931.
+
+ -- Martin A. Godisch <godisch@debian.org>  Tue, 29 Mar 2005 09:32:42 +0200
+
+minicom (2.1-8) unstable; urgency=low
+
+  * Fixed FTBFS with gcc 4.0, closes: #287654.
+  * Fixed POSIX compliance of debian/rules.
+  * Added watch file
+
+ -- Martin A. Godisch <godisch@debian.org>  Sat, 01 Jan 2005 19:45:10 +0100
+
+minicom (2.1-7) unstable; urgency=low
+
+  * Updated Polish localization, thanks to Wiesiek, closes: #220396.
+  * Updated package description and standards version.
+
+ -- Martin A. Godisch <godisch@debian.org>  Wed, 12 Nov 2003 19:17:17 +0100
+
+minicom (2.1-6) unstable; urgency=low
+
+  * Added SEE ALSO to minicom.1 and runscript.1, closes: #205503.
+
+ -- Martin A. Godisch <godisch@debian.org>  Fri, 15 Aug 2003 07:31:53 +0200
+
+minicom (2.1-5) unstable; urgency=low
+
+  * Enabled user config files without corresponding system-wide config
+    files, closes: #204522.
+
+ -- Martin A. Godisch <godisch@debian.org>  Mon, 11 Aug 2003 06:24:23 +0200
+
+minicom (2.1-4) unstable; urgency=low
+
+  * Updated package description, closes: #201859.
+  * Removed debug output, closes: #202896.
+  * Removed debconf support, adjusted dependencies:
+    + minicom/pr_port is done without confirmation,
+    + minicom/configure is obsoleted by README.Debian.
+  * Fixed removal of /etc/minicom.
+  * Converted debian/changelog to UTF-8.
+  * Updated standards version.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 27 Jul 2003 17:56:34 +0200
+
+minicom (2.1-3) unstable; urgency=low
+
+  * Fixed handling of white space in file names, closes: #199924.
+  * Updated deb'configuration, made it optional.
+  * Changed default value for minirc.* update to false.
+  * Re-added lost *.gmo recreation.
+  * Added patch to build-dependencies.
+
+ -- Martin A. Godisch <godisch@debian.org>  Fri, 04 Jul 2003 09:11:15 +0200
+
+minicom (2.1-2) unstable; urgency=low
+
+  * Added Spanish to 8bit workaround, closes: #193789.
+  * Fixed configure output.
+
+ -- Martin A. Godisch <godisch@debian.org>  Mon, 19 May 2003 00:04:55 +0200
+
+minicom (2.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed several patches which are now in the upstream source.
+  * Moved xminicom.1 into the upstream source tree.
+  * Moved patching into debian/rules for upstream CVS compatibility.
+  * Added dependency on autotools-dev for up-to-date aux/config.*.
+  * Updated standards version.
+
+ -- Martin A. Godisch <godisch@debian.org>  Sun, 18 May 2003 17:11:05 +0200
+
+minicom (2.00.0-5) unstable; urgency=low
+
+  * Re-inserted fixed russian translation, see #187951.
+    Backported 8bit patch from CVS.
+
+ -- Martin A. Godisch <godisch@debian.org>  Wed, 30 Apr 2003 18:46:45 +0200
+
+minicom (2.00.0-4) unstable; urgency=low
+
+  * Removed russian translation, closes: #187951. I can reproduce this bug,
+    but I don't know how to fix it, the l10n code and the po file look good.
+    I notified the upstream maintainer about it, the translation will be put
+    back when this issue is fixed.
+  * New upstream maintainer, updated control, copyright, and README.Debian.
+  * Removed debian/patches, patching will change a lot in the next upstream
+    release.
+  * Minor maintainer script cleanups.
+
+ -- Martin A. Godisch <godisch@debian.org>  Mon, 07 Apr 2003 17:53:04 +0200
+
+minicom (2.00.0-3) unstable; urgency=low
+
+  * Added ~ -> $HOME expansion for path name configuration, closes: #54946.
+  * Fixed default value for minicom/pr_port.
+  * Cosmetic fix for ./configure.
+
+ -- Martin A. Godisch <godisch@debian.org>  Thu, 20 Mar 2003 15:15:35 +0100
+
+minicom (2.00.0-2) unstable; urgency=low
+
+  * Fixed build failure on s390, thanks to Jordi Mallach,
+    closes: #185540.
+  * Changed charset in jp.po to euc-jp, see also 1.83.1-4.1,
+    closes: #185541.
+
+ -- Martin A. Godisch <godisch@debian.org>  Thu, 20 Mar 2003 02:43:20 +0100
+
+minicom (2.00.0-1) unstable; urgency=low
+
+  * New maintainer upload, thanks for the NMUs,
+    closes: #102443, #106444, #110838, #110886, #112258, #112389,
+    closes: #113202, #113487, #120350, #57263, #119861.
+  * New upstream release, closes: #153166, #147812, #158695.
+  * Allowed users to change the serial port, closes: #18009 et al.
+  * Added error reporting, closes: #111060 et al.
+  * Extended user input range, closes: #44795.
+  * Fixed escape key label, closes: #110833.
+    Please complain if this is now broken under some other conditions.
+  * Fixed endless loop in runscript, closes: #54944.
+  * GNU/Hurd: added /dev/com0 to ./configure (not yet to configure.in),
+    fixed several #ifdef's, thanks to Robert Millan and Jordi Mallach.
+  * Maintainer script and debian/ cleanup, closes: #116928 et al,
+    updated standards version, transition to po-debconf.
+  * Added catalan debconf translation, thanks to Jordi Mallach.
+  * Added spanish debconf translation, thanks to Ricardo Javier Cardenes.
+  * Added french debconf translation, thanks to Christian Perrier,
+    closes: #185493.
+  * Added portuguese debconf translation, thanks to André Luís Lopes.
+  * Added german debconf translation.
+  * Added setfont note to README.Debian, closes: #15799.
+  * Moved cs_CZ to cs, and fi_FI to fi, removed ja_JP.SJIS, fixed
+    po/Makefile.in.in, removed all *.gmo files, minicom.pot, and
+    cat-id-tbl.c in the debian/rules clean target.
+  * Applied some patches from 1.83.1-5 and bugfixes from the upstream
+    CVS tree, fixed several complier warnings, see debian/patches.
+  * Recommends: lrzsz, I don't agree with #11140, see #151261 et al.
+  * Added null-modem example configuration.
+
+ -- Martin A. Godisch <godisch@debian.org>  Wed, 19 Mar 2003 14:18:55 +0100
+
+minicom (1.83.1-5) unstable; urgency=low
+
+  * src/main.c: for LCK files, use the whole path minus /dev/ and
+    replace slashes with underscores (closes: #153933).
+  * Set Uploaders field to contain me and Jordi Mallach
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Wed, 31 Jul 2002 20:57:08 +0200
+
+minicom (1.83.1-4.6) unstable; urgency=low
+
+  * debian/{config,rules,templates}: remove all the stuff about the
+    Meta-Key setting. It's wrong and unneeded, as the default can be set
+    very easily using minicom -s (closes: #116928).
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 26 Jul 2002 17:09:58 +0200
+
+minicom (1.83.1-4.5) unstable; urgency=low
+
+  * Looks like dpkg won't update directory permissions on upgrades, so
+    the "wrong perms on examples dir" bug wasn't getting fixed if -4.4
+    wasn't a new install.
+  * debian/postinst: chmod 755 /usr/share/doc/minicom/examples
+    (closes: #112258).
+  * debian/menu: fix location of xminicom (closes: #119861).
+  * src/xminicom: use x-terminal-emulator as first option. It won't set
+    background or anything else than the window title (policy only asks
+    that -e and -T are implemented). Use Xresources to customize.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 20 Nov 2001 22:27:46 +0100
+
+minicom (1.83.1-4.4) unstable; urgency=low
+
+  * Non-Maintainer Upload.
+  * debian/postinst: applied patch from Gergely Nagy so postinst doesn't
+    add "Meta" lines to minirc.dfl each time minicom is upgraded
+    (closes: #112389).
+  * debian/{config,templates}: removed debconf notes about conffile moving,
+    too much verbosity... (closes: #113202)
+  * debian/templates.de: added German translation of debconf templates;
+    thanks Sebastian Fetel (closes: #113487).
+  * debian/rules: merge templates and install them in the target dir.
+  * debian/control: added debconf-utils to Build-Depends.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon,  8 Oct 2001 00:45:59 +0200
+
+minicom (1.83.1-4.3) unstable; urgency=low
+
+  * Non-Maintainer Upload.
+  * Applied patch from Neal Walfield which fixes compilation issues for
+    GNU/Hurd (closes: #106444).
+  * debian/rules: create /usr/share/doc/minicom/examples with correct
+    permissions (closes: #112258).
+
+ -- Jordi Mallach <jordi@debian.org>  Sat, 15 Sep 2001 15:54:24 +0200
+
+minicom (1.83.1-4.2) unstable; urgency=medium
+
+  * Non-Maintainer Upload.
+  * Cleaning up the mess with some upgrades to -4.1:
+    + debian/preinst:
+      - fix the "mv" statement, making it not fail if there are no minirc
+        files to move.
+      - if during this upgrade, previous version was -4.1, check if
+        /etc/minicom/minirc.dfl and /etc/minicom/minicom.users exist. If they
+        do, probably the user moved them by hand after the upgrade, so copy
+        the /etc ones to /etc/minicom/ with an .old suffix. Same if
+        the files exist only in /etc (corner case if people reran apt).
+    + debian/postrm: rmdir /etc/minicom after we've done the move of stuff
+      to the old location.
+    Hopefully, all of this closes: #110838.
+
+ -- Jordi Mallach <jordi@debian.org>  Sat,  1 Sep 2001 14:55:15 +0200
+
+minicom (1.83.1-4.1) unstable; urgency=low
+
+  * Non-Maintainer-Upload, approved by Miquel.
+  * Fixed minicom's build problems:
+    + debian/control: added Build-Dependency on gettext.
+    + src/po/ja.po: changed charset to euc-jp.
+    + src/po/Makefile: removed ko.mo and ja_JP.SJIS.mo from CATALOGS.
+      About ja_JP.SJIS.mo, GOTO Masanori, a Japanese GNU translation
+      team member said that "ja_JP.SJIS should die". Not a real fix, but
+      the po maintainers have been contacted. If you're Korean and know
+      how to fix the ko.po, please do so and send a bug report. Thanks.
+    + while we are at it, move fi_FI.po to fi.po.
+    + and hey, I found a Czech po in Minicom's webpage.
+  * Minicom is FHS compliant since February (closes: #102443).
+  * debian/conffiles:
+    + removed /etc/minirc.dfl, which is modified by scripts, regenerated
+      by minicom every now and then and raped by policy-violating monkeys.
+    + move /etc/minicom.users to /etc/minicom.
+  * debian/postinst:
+    + rewrote it in shell.
+    + kill the code which moved these files from /var/lib/minicom to /etc.
+      I have checked all Debian releases from Buzz to Potato and these have
+      never been in that location at release time.
+    + remove cruft handled by Debconf (closes: #57263).
+    + if /etc/minicom/minirc.dfl doesn't exist, copy the one in
+      /usr/share/doc/minicom/examples.
+  * debian/preinst: if upgrading from previous versions to this one, move
+    minicom files in /etc to /etc/minicom (closes: #88660).
+  * debian/postrm:
+    + purge debconf's db changes.
+    + restore /etc files if abort-install|abort-upgrade.
+    + rm -rf /etc/minicom on purge.
+  * debian/{config,templates}: added Debconf scripts and templates.
+  * debian/rules:
+    + install debconf files in the package.
+    + install minirc.dfl in /usr/share/doc/minicom/examples.
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 31 Aug 2001 14:23:07 +0200
+
+minicom (1.83.1-4) unstable; urgency=low
+
+   * Don't include korean translation for now (ko.po) since it doesn't
+     build into a .mo file anymore with the latest gettext (closes: #95538)
+   * Include "developers" file (closes: #88124)
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Fri,  6 Jul 2001 16:34:20 +0200
+
+minicom (1.83.1-3) unstable; urgency=low
+
+   * Include both time.h and sys/time.h (closes: #89126)
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Fri,  6 Apr 2001 13:24:00 +0200
+
+minicom (1.83.1-2) unstable; urgency=low
+
+   * Fixes for glibc 2.2.2 which now has "lint" builtin or so it seems ;)
+     (closes: #86982, #87023)
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Thu, 22 Feb 2001 17:51:37 +0100
+
+minicom (1.83.1-1) unstable; urgency=low
+
+  * New upstream version (closes: #68883, #65760, #66034, #66048, #65695)
+  * Allow pts/n tty name. (closes: #75409)
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Wed, 21 Feb 2001 15:34:32 +0100
+
+minicom (1.82.1-2) unstable; urgency=low
+
+  * The upgrade from -1 to -2 was actually completely done
+    by Jordi Mallach <jordi@debian.org>.
+    Thanks a lot for fixing all those bugs, Jordi !
+    The rest of this changelog is his.
+  * Applied patch from Brad Midgley <brad@turbolinux.com> to fix a
+    timeout in PowerPC (closes: #74640).
+  * Applied patch from Lenart Janos <ocsi@debian.org> for minicom.h
+    to fix minicom not building anymore in Debian.
+  * Recompiled with libncurses5 (closes: #64701).
+  * Several policy fixes:
+    + debian/rules: install things in /usr/share/man, /usr/share/doc,
+      /usr/bin (closes: #79745). Removed .note and .comment sections from
+      binaries.
+    + debian/{postinst,prerm}: add and remove /usr/doc -> /usr/share/doc
+      symlinks.
+    + debian/postrm: use "set -e".
+    + debian/control: added Build-Depends, upped Standards-Version to
+      current 3.5.1.0.
+    + Copyright: fix location of the GPL and add URL for upstream sources.
+  * debian/menu: added "hints" by suggestion of Yann Dirson in the BTS
+    (closes: #80157).
+  * Minicom is Priority: optional already (closes: #50762).
+  * debian/rules: call dpkg-gencontrol with -isp.
+  * man/minicom.1: added a note about minicom not being setuid root in
+    Debian systems, and the existance of the `dialout' group. Changed 
+    /dev/cuaX notations to current /dev/ttySX (closes: #29628).
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Mon, 19 Feb 2001 22:48:14 +0100
+
+minicom (1.82.1-1) unstable; urgency=low
+
+  * New upstream version
+  * Added Newline-delay in Terminal menu (config.c) and emulator
+    code (vt100.c). Needed to program my PM3's with cut and paste ..
+  * Fixes bugs:
+    #30844: minicom: xminicom does not start, missing -tn
+    (even if it was a bug, it would not be a bug in minicom)
+    #31333: minicom 1.82-3 will not dial
+    (that's not a bug, it's a misconfigured modem)
+    #34161: zmodem download fails due to invalid rz switch
+    #34975: minicom: minicom special characters do not work on linux console
+    #34495: minicom 1.82.1 available
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Wed, 21 Apr 1999 22:44:59 +0200
+
+minicom (1.82-3) frozen unstable; urgency=high
+
+  * ncurses4 version, reuploaded to both frozen and unstable
+    instead of just unstable. Argh.
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Fri,  6 Nov 1998 17:54:33 +0100
+
+minicom (1.82-2) unstable; urgency=high
+
+  * Link with ncurses4
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Sat, 31 Oct 1998 19:37:17 +0100
+
+minicom (1.82-1) unstable; urgency=low
+
+  * New upstream version
+  * remove debian/files debian/substvars in clean target so that building on
+    other architectures doesn't try to access minicom_1.82-1_i386.deb :-(
+  * Fixes bugs:
+    #25378: minicom: doesn't remove debian/files
+    #26313: minicom: non-maintainer upload (alpha) diffs
+    #27098: Minicom 1.82 is available
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Mon,  5 Oct 1998 12:41:08 +0200
+
+minicom (1.81.1-1) unstable; urgency=low
+
+  * New upstream version
+  * Fixes:
+    #15426: minicom: changelog uncompressed
+    #18836: ascii transfer with minicom
+    #18469: minicom: add a menu file
+    #22314: [Tiago F P Rodrigues <11108496@LIS.ULUSIADA.PT>] Overflows in minic
+    #22321: Overflows in minicom (fwd)
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Tue, 19 May 1998 17:04:38 +0200
+
+minicom (1.75-3) unstable; urgency=low
+
+  * Libc6 version
+  * Change default port to ttySx
+  * Suggests: lrzsz instead of Recommends:
+  * Remove -8 from rxvt invocation
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Wed, 15 Oct 1997 15:12:59 +0200
+
+minicom (1.75-2) frozen unstable; urgency=medium
+
+  * Fixed minor security hole (.dialdir got created world readable)
+  * Fix crash in dialing directory
+  * Upgrade to new source format (about time..)
+  * Add extended description
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Mon, 28 Apr 1997 17:19:18 +0200
+
+minicom (unknown) unknown unknown; urgency=unknown
+
+  * Fixed pre/postinst script.
+  * Switched to my new debian.rules style.
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Sat, 08 Jun 1996 00:00:00 +0000
+
+minicom (1.73) unknown unknown; urgency=unknown
+
+  * Created minicom 1.73 because of security risk
+  * Added debian control files to upstream package.
+
+ -- Miquel van Smoorenburg <miquels@cistron.nl>  Wed, 18 Jan 1995 00:00:00 +0000

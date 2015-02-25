@@ -1,0 +1,19 @@
+--- minicom-2.7.orig/src/config.c
++++ minicom-2.7/src/config.c
+@@ -933,11 +933,11 @@ static void doscrkeyb(void)
+         if (atoi(P_HISTSIZE) != num_hist_lines) {
+           w1 = mc_wopen(14, 9, 70, 15, BSINGLE, stdattr, mfcolor, mbcolor, 0, 0, 1);
+           mc_wtitle(w1, TMID, _("History Buffer Size"));
+-          mc_wputs(w1, _("\n\
+-                You have changed the history buffer size.\n\
+-                You will need to save the configuration file and\n\
+-                restart minicom for the change to take effect.\n\n\
+-                Hit a key to Continue... "));
++          mc_wputs(w1, _(
++             "\n You have changed the history buffer size.\n"
++             " You will need to save the configuration file and\n"
++             " restart minicom for the change to take effect.\n"
++             "\n Hit a key to Continue... "));
+           mc_wredraw(w1, 1);
+           c = wxgetch();
+           mc_wclose(w1, 1);
