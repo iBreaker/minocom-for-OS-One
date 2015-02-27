@@ -47,9 +47,14 @@ void  read_mouse(void)
             {
                 continue;
             }
-            printf("Button type = %d, X = %d, Y = %d, Z = %d\n", (buf[0] & 0x07), buf[1], buf[2],   buf[3]);
-            char temp = 0;
+            //printf("Button type = %d, X = %d, Y = %d, Z = %d\n", (buf[0] & 0x07), buf[1], buf[2],   buf[3]);
+            char temp = 255;
+            write(portfd, &temp, 1);
             temp = buf[0] & 0x07;
+            write(portfd, &temp, 1);
+            temp = buf[1] ;
+            write(portfd, &temp, 1);
+            temp = buf[2] ;
             write(portfd, &temp, 1);
         }
     }
